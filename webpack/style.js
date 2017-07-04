@@ -28,7 +28,10 @@ module.exports = function (paths) {
         plugins: [
             new ExtractTextPlugin('./assets/css/[name].css'),
             new OptimizeCssAssetsPlugin({
-                cssProcessorOptions: { discardComments: {removeAll: true }},
+                cssProcessorOptions: {
+                    discardComments: {removeAll: true },
+                    safe: true,
+                },
             }),
             new StyleLintPlugin({
                 configFile: './.stylelintrc',

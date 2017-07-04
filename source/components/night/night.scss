@@ -36,6 +36,7 @@
   background-color: #223b65;
   position: relative;
   overflow: hidden;
+  z-index: 9;
 }
 .night__content, .night__mountains, .night__stars, .night__twinkling, .night__clouds {
   position:absolute;
@@ -49,7 +50,7 @@
   will-change: transform;
 }
 .night__mountains {
-  z-index: 9;
+  z-index: 5;
   height: calc(100vh + 1%);
   bottom: -1%;
   width: 102%;

@@ -13,16 +13,97 @@
   <body>
     <div class="main-menu">
       <ul class="menu-hamburger">
-        <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="/works.html">Мои работы</a></li>
-        <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="/about.html">Обо мне</a></li>
-        <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="/blog.html">Блог</a></li>
-        <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="/index.html">Авторизация</a></li>
+        <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="works.html">Мои работы</a></li>
+        <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="about.html">Обо мне</a></li>
+        <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="blog.html">Блог</a></li>
+        <li class="menu-hamburger__item"><a class="menu-hamburger__link" href="index.html">Авторизация</a></li>
       </ul>
     </div>
     <div class="hamburger-button"><a class="button-hamburger" href="#"><span class="button_hamburger__line"></span></a>
     </div>
     <div class="wrapper">
-      <section class="content">
+      <div class="hero">
+        <div class="hero__authorization"><a class="button undefined" href="#" id="js_login_flip_back">Авторизация</a>
+        </div>
+        <div class="login" id="js_login">
+          <div class="login__face" id="login__face">
+            <div class="login__foto">
+                      <div class="foto foto_circle"><img class="foto__img" src="./assets/images/foto.jpg" alt="Годеев Валерий"></div>
+            </div>
+            <div class="login__title">Гордеев Валерий</div>
+            <div class="login__text">Личный сайт веб разработчика</div>
+            <div class="login__social">
+              <ul class="social">
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="social__icon undefined">
+                      <use xlink:href="./assets/images/sprite.svg#vk"></use>
+                    </svg></a></li>
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="social__icon undefined">
+                      <use xlink:href="./assets/images/sprite.svg#github"></use>
+                    </svg></a></li>
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="social__icon undefined">
+                      <use xlink:href="./assets/images/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <div class="login__menu">
+              <ul class="menu  menu_login-face">
+                <li class="menu__item"><a class="menu__link" href="works.html" id="">Мои работы</a>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="about.html" id="">Обо мне</a>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="blog.html" id="">Блог</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="login__back" id="login__back">
+            <div class="login__form-title">Авторизуйтесь</div>
+            <div class="login__form">
+              <form>
+                <div class="login__data">
+                          <div class="input__container">
+                            <input class="input input_login" id="login" name="login" placeholder="Логин" type="text">
+                            <label class="input__icon-label" for="login">
+                              <svg class="input__icon">
+                                <use xlink:href="./assets/images/sprite.svg#login"></use>
+                              </svg>
+                            </label>
+                          </div>
+                          <div class="input__container">
+                            <input class="input input_password" id="password" name="password" placeholder="Пароль" type="password">
+                            <label class="input__icon-label" for="password">
+                              <svg class="input__icon">
+                                <use xlink:href="./assets/images/sprite.svg#password"></use>
+                              </svg>
+                            </label>
+                          </div>
+                          <div class="input__container">
+                            <input class="input input_checkbox" id="checkbox" name="checkbox" type="checkbox">
+                            <label class="input__checkbox-check" for="checkbox"></label>
+                            <label class="input__checkbox-label" for="checkbox">Я человек</label>
+                          </div>
+                  <div class="login__text">Вы точно не робот?</div>
+                          <div class="input__container">
+                            <input class="input input_radio" id="yes_robot" name="robot" type="radio" value="yes">
+                            <label class="input__radio-label" for="yes_robot">Да</label>
+                            <input class="input input_radio" id="no_robot" name="robot" type="radio" value="no">
+                            <label class="input__radio-label" for="no_robot">Не уверен</label>
+                          </div>
+                </div>
+                <ul class="menu  menu_login-back">
+                  <li class="menu__item"><a class="menu__link" href="#" id="js_login_flip_face">На главную</a>
+                  </li>
+                  <li class="menu__item"><a class="menu__link" href="#" id="js_go_login">Войти</a>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 <div class="night">
   <div class="night__content" id="js_parallax_night"><img class="night__mountains" id="js_parallax_night_mountains" src="./assets/images/mountains.png">
     <div class="night__stars"></div>
@@ -30,89 +111,6 @@
     <div class="night__clouds"></div>
   </div>
 </div>
-        <div class="hero">
-          <div class="hero__authorization"><a class="button undefined" href="#" id="js_login_flip_back">Авторизация</a>
-          </div>
-          <div class="login" id="js_login">
-            <div class="login__face" id="login__face">
-              <div class="login__foto">
-                          <div class="foto foto_circle"><img class="foto__img" src="./assets/images/foto.jpg" alt="Годеев Валерий"></div>
-              </div>
-              <div class="login__title">Гордеев Валерий</div>
-              <div class="login__text">Личный сайт веб разработчика</div>
-              <div class="login__social">
-                <ul class="social">
-                  <li class="social__item"><a class="social__link" href="#">
-                      <svg class="social__icon undefined">
-                        <use xlink:href="./assets/images/sprite.svg#vk"></use>
-                      </svg></a></li>
-                  <li class="social__item"><a class="social__link" href="#">
-                      <svg class="social__icon undefined">
-                        <use xlink:href="./assets/images/sprite.svg#github"></use>
-                      </svg></a></li>
-                  <li class="social__item"><a class="social__link" href="#">
-                      <svg class="social__icon undefined">
-                        <use xlink:href="./assets/images/sprite.svg#in"></use>
-                      </svg></a></li>
-                </ul>
-              </div>
-              <div class="login__menu">
-                <ul class="menu  menu_login-face">
-                  <li class="menu__item"><a class="menu__link" href="works.html" id="">Мои работы</a>
-                  </li>
-                  <li class="menu__item"><a class="menu__link" href="about.html" id="">Обо мне</a>
-                  </li>
-                  <li class="menu__item"><a class="menu__link" href="blog.html" id="">Блог</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="login__back" id="login__back">
-              <div class="login__form-title">Авторизуйтесь</div>
-              <div class="login__form">
-                <form>
-                  <div class="login__data">
-                              <div class="input__container">
-                                <input class="input input_login" id="login" name="login" placeholder="Логин" type="text">
-                                <label class="input__icon-label" for="login">
-                                  <svg class="input__icon">
-                                    <use xlink:href="./assets/images/sprite.svg#login"></use>
-                                  </svg>
-                                </label>
-                              </div>
-                              <div class="input__container">
-                                <input class="input input_password" id="password" name="password" placeholder="Пароль" type="password">
-                                <label class="input__icon-label" for="password">
-                                  <svg class="input__icon">
-                                    <use xlink:href="./assets/images/sprite.svg#password"></use>
-                                  </svg>
-                                </label>
-                              </div>
-                              <div class="input__container">
-                                <input class="input input_checkbox" id="checkbox" name="checkbox" type="checkbox">
-                                <label class="input__checkbox-check" for="checkbox"></label>
-                                <label class="input__checkbox-label" for="checkbox">Я человек</label>
-                              </div>
-                    <div class="login__text">Вы точно не робот?</div>
-                              <div class="input__container">
-                                <input class="input input_radio" id="yes_robot" name="robot" type="radio" value="yes">
-                                <label class="input__radio-label" for="yes_robot">Да</label>
-                                <input class="input input_radio" id="no_robot" name="robot" type="radio" value="no">
-                                <label class="input__radio-label" for="no_robot">Не уверен</label>
-                              </div>
-                  </div>
-                  <ul class="menu  menu_login-back">
-                    <li class="menu__item"><a class="menu__link" href="#" id="js_login_flip_face">На главную</a>
-                    </li>
-                    <li class="menu__item"><a class="menu__link" href="#" id="js_go_login">Войти</a>
-                    </li>
-                  </ul>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
     <footer class="footer footer_transparent">
       <div class="footer__copyright footer__copyright_transparent">© Гордеев Валерий | Создано с любовью в LoftSchool | 2017</div>

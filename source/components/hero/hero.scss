@@ -8,10 +8,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 20;
 }
 .hero__authorization {
   position: absolute;
-  z-index: 20;
   top: rem(24px);
   right: rem(100px);
 
