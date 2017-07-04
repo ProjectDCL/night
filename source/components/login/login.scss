@@ -4,11 +4,14 @@
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
-  position: relative;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
   width: rem(380px);
   height: rem(410px);
   padding: 0 rem(20px);
-  margin: 0;
+  margin: auto;
 }
 .login__face, .login__back {
   position: absolute;
