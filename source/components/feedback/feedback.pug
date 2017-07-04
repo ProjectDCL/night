@@ -1,0 +1,12 @@
+include ../button/button
+
+div.feedback
+    .feedback__header Связаться со мной
+    form
+        .feedback__data
+            input.feedback__input(placeholder="Ваше имя")
+            input.feedback__input(placeholder="Ваш email")
+            textarea.feedback__textarea(placeholder="Ваше сообщение" rows="5")
+        .feedback__button
+            +button('js_feedback_send', 'Отправить', 'button_blue button_half-block')
+            +button('js_feedback_clear', 'Очистить', 'button_transparent button_half-block')

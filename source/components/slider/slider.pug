@@ -1,0 +1,20 @@
+include ../button-with-icon/button-with-icon
+
+.slider
+    .slider__desc.slider__col_left
+        .slider__desc-info
+            h2.slider__desc-title Сайт школы онлайн<br>образования
+            .slider__desc-skills
+                | HTML, css, javascript
+            .slider__desc-button
+                +button-with-icon('js_show_site', 'Посмотреть сайт', 'link')
+    .slider__display.slider__col_right
+        .slider__display-container
+            img(src=require("../../images/slide1.png") alt="").slider__display-img
+    .slider__button-control
+        a(href="#").slider__button.slider__button_left
+            svg(class=("slider__icon"))
+                use(xlink:href=require("../../images/sprite.svg") + "#portf_arrow_down")
+        a(href="#").slider__button.slider__button_right
+            svg(class=("slider__icon"))
+                use(xlink:href=require("../../images/sprite.svg") + "#portf_arrow_up")

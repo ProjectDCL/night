@@ -1,0 +1,30 @@
+include ../menu-hamburger/menu-hamburger
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(content="" name="Гордеев В.В.")
+        meta(content="" name="Выпускной проект продвинутого курса веб-разработки Loftschool")
+        meta(content="" name="портфолио сайт веб-разработка loftschool")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+        block head
+
+        //- favicon block start
+        //- favicon block end
+
+        <!--[if lt IE 9]>
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+        <![endif]-->
+    body
+        .main-menu
+            +menu-hamburger([{url: "works.html", text: 'Мои работы'},{url: "about.html", text: 'Обо мне'},{url: "blog.html", text: 'Блог'},{url: "index.html", text: 'Авторизация'}])
+        .hamburger-button
+            include ../button-hamburger/button-hamburger
+        .wrapper
+            block header
+            block content
+        block footer
+

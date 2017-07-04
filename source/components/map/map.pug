@@ -1,0 +1,9 @@
+include ../contact-with-icon/contact-with-icon
+
+section.map
+    <iframe id="js_map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6037.1653968644105!2d69.61285709843237!3d40.83712884900454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1498211552560" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    .map__contact
+        +contact-with-icon([{icon:'skype_n', text: 'zindzay'},
+            {icon:'phone_n', text: '+99893 182 30 31'},
+            {icon:'envelope_n', text: 'zindzay@yandex.com'},
+            {icon:'map_n', text: 'г.Алмалык, ул.Узбекистанская д.7'}])

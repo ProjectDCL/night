@@ -1,0 +1,26 @@
+mixin input(type, id, placeholder, mod)
+    - mod = mod || ''
+    - placeholder = placeholder || ''
+    .input__container
+        case type
+            when 'login'
+                input(id="" + id name="" + id class="input" + ' ' + mod placeholder="" + placeholder type="text")
+                label(for="" + id class="input__icon-label")
+                    svg(class=("input__icon"))
+                        use(xlink:href=require("../../images/sprite.svg") + "#login")
+            when 'password'
+                input(id="" + id name="" + id class="input" + ' ' + mod placeholder="" + placeholder type="password")
+                label(for="" + id class="input__icon-label")
+                    svg(class=("input__icon"))
+                        use(xlink:href=require("../../images/sprite.svg") + "#password")
+            when 'checkbox'
+                input(id="" + id name="" + id class="input" + ' ' + mod type="checkbox")
+                label(for="" + id class="input__checkbox-check")
+                label(for="" + id class="input__checkbox-label") #{placeholder}
+            when 'radio'
+                input(id="yes_" + id name="" + id class="input" + ' ' + mod type="radio" value="yes")
+                label(for="yes_" + id class="input__radio-label") Да
+                input(id="no_" + id name="" + id class="input" + ' ' + mod type="radio" value="no")
+                label(for="no_" + id class="input__radio-label") Не уверен
+            default
+                input(id="" + id name="" + id class="input" + ' ' + mod placeholder="" + placeholder type="text")

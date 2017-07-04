@@ -1,0 +1,79 @@
+@import '../mixins/mixins.scss';
+
+.contact-with-icon {
+  width: rem(580px);
+  background-color: rgba(241,241,241,.7);
+  padding: rem(37px) rem(16px);
+  margin: 0;
+
+  @include tablet() {
+    width: rem(348px);
+  }
+  @include mobile() {
+    width: rem(271px);
+  }
+}
+.contact-with-icon__header {
+  text-align: center;
+  margin-bottom: rem(30px);
+  padding: 0 rem(7px) rem(25px);
+  display: block;
+  font-family: "Sansus Webissimo", Arial, sans-serif;
+  font-weight: 400;
+  font-size: rem(35px);
+  color: #474b57;
+  text-transform: uppercase;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: rem(90px);
+    height: 3px;
+    background-color: rgba(71, 75, 87, .5);
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+.contact-with-icon__list {
+  column-count:2;
+
+  @include tablet() {
+    column-count:1;
+  }
+  @include mobile() {
+    column-count:1;
+  }
+}
+.contact-with-icon__item {
+  max-width: rem(245px);
+  margin-bottom: rem(30px);
+
+  @include tablet() {
+    max-width: rem(316px);
+  }
+  @include mobile() {
+    max-width: rem(239px);
+  }
+
+}
+.contact-with-icon__icon {
+  min-width: rem(45px);
+  min-height: rem(45px);
+  max-width: rem(45px);
+  max-height: rem(45px);
+  fill: #004cd1;
+  display: inline-block;
+}
+.contact-with-icon__text {
+  font-weight: 500;
+  color: rgba(71,75,87,.8);
+  display: inline-block;
+  margin-left: rem(9px);
+}
+.contact-with-icon__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+}

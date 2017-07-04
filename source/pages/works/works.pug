@@ -1,0 +1,14 @@
+extends ../../components/loyout/loyout
+
+include ../../components/header/header
+include ../../components/footer/footer
+
+block head
+    title Мои работы
+block header
+    include ../../components/night/night
+    +header('works')
+block content
+    include ../../components/works-content/works-content
+block footer
+    +footer()

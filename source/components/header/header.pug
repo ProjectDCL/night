@@ -1,0 +1,69 @@
+include ../foto/foto
+include ../social/social
+include ../title-icon/title-icon
+
+mixin header(type)
+    case type
+        when 'blog'
+            header.header
+                .header__arrow
+                    svg.header__arrow-icon
+                        use(xlink:href=require("../../images/sprite.svg") + "#arrow_down")
+                .header__social
+                    +social('social_white')
+                .header__content#js_parallax_hero
+                    .header__content-bg
+                        img(class=("header__content-bg-icon") src=require("../../images/star1.png"))
+                    .header__foto
+                        +foto('foto_circle')
+                    .header__title-container
+                        +title-icon('blog_header')
+                        h1.header__title Блог
+                    .header__description Статьи, которые я написал
+                .header__traingle
+                    svg.header__traingle-img(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+                        polygon.header__traingle-left(points='0,0   0,86   500.8,86   500.8,75.5')
+                        polygon.header__traingle-right(points='1000,0   1000,86   500,86   500,75.5')
+        when 'about'
+            header.header
+                .header__arrow
+                    svg.header__arrow-icon
+                        use(xlink:href=require("../../images/sprite.svg") + "#arrow_down")
+                .header__social
+                    +social('social_white')
+                .header__content
+                    .header__content-bg
+                        img(class=("header__content-bg-icon") src=require("../../images/star1.png"))
+                    .header__foto
+                        +foto('foto_circle')
+                    .header__title-container
+                        h5.header__subtitle Гордеев Валерий
+                    .header__description Личный сайт веб разработчика
+                .header__traingle
+                    svg.header__traingle-img(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+                        polygon.header__traingle-left.header__traingle_laptop_gray(points='0,0   0,86   500.8,86   500.8,75.5')
+                        polygon.header__traingle-right.header__traingle_gray(points='1000,0   1000,86   500.8,86   500.8,75.5')
+        when 'works'
+            header.header
+                .header__arrow.header__arrow_bottom
+                    svg.header__arrow-icon
+                        use(xlink:href=require("../../images/sprite.svg") + "#arrow_down")
+                .header__social
+                    +social('social_white')
+                .header__content
+                    .header__content-bg
+                        img(class=("header__content-bg-icon") src=require("../../images/star1.png"))
+                    .header__foto
+                        +foto('foto_circle')
+                    .header__title-container
+                        h5.header__subtitle Гордеев Валерий
+                    .header__description Личный сайт веб разработчика
+                .header__traingle.header__traingle_bottom
+                    svg.header__traingle-img(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+                        polygon.header__traingle-left.header__traingle_transparent(points='0,0   0,86   500.8,86   500.8,75.5')
+                        polygon.header__traingle-right.header__traingle_transparent(points='1000,0   1000,86   500.8,86   500.8,75.5')
+                .header__title_full-screen.header__title_transparent
+                    +title-icon('works_header')
+                    .header__title Мои работы
+        default
+            header.header

@@ -1,0 +1,24 @@
+include ../input/input
+include ../foto/foto
+
+.login#js_login
+    .login__face#login__face
+        .login__foto
+            +foto('foto_circle')
+        .login__title Гордеев Валерий
+        .login__text Личный сайт веб разработчика
+        .login__social
+            +social
+        .login__menu
+            +menu([{url: "works.html", text: 'Мои работы'},{url: "about.html", text: 'Обо мне'},{url: "blog.html", text: 'Блог'}], 'menu_login-face')
+    .login__back#login__back
+        .login__form-title Авторизуйтесь
+        .login__form
+            form
+                .login__data
+                    +input('login', 'login', 'Логин', 'input_login')
+                    +input('password', 'password', 'Пароль', 'input_password')
+                    +input('checkbox', 'checkbox', 'Я человек', 'input_checkbox')
+                    .login__text Вы точно не робот?
+                    +input('radio', 'robot', 'Я не робот', 'input_radio')
+                +menu([{url: "#", text: 'На главную', id: 'js_login_flip_face'}, {url: "#", text: 'Войти', id: 'js_go_login'}], 'menu_login-back')

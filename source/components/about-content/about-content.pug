@@ -1,0 +1,36 @@
+include ../title-icon/title-icon
+include ../foto/foto
+include ../skils/skills
+
+section.about-content
+    .about-content__left
+        .about-content__col
+            .about-content__header
+                +title-icon('about_header', 'title-icon_blue')
+                h1.about-content__title Обо мне
+        .about-content__col
+            .about-content__img
+                +foto('foto_big')
+            .about-content__header
+                h2.about-content__subtitle Кто я
+            .about-content__description
+                |Я веб разработчик из Алмалыка. Мне 30 лет. Я занимаюсь разработкой современных сайтов
+                |и приложений. Мне нравится делать интересные и современные проекты.Этот сайт я сделал в
+                |рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой
+                |контент. А пока посмотрите, как тут всё классно и красиво!
+    .about-content__right
+        .about-content__header
+            h2.about-content__subtitle Чем я могу быть вам полезен
+        .about-content__description
+            |Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        .about-content__skills
+            +skills('Frontend', [{name: 'HTML5', progress: .9},
+                {name: 'CSS3', progress: .7},
+                {name: 'JavaScript & jQuery', progress: .5}])
+            +skills('Backend', [{name: 'PHP', progress: .5},
+                {name: 'mySQL', progress: .9 },
+                {name: 'Node.js & npm', progress: .2},
+                {name: 'Mongo.db', progress: .01}])
+            +skills('WorkFlow', [{name: 'Git', progress: .8},
+                {name: 'Gulp', progress: .8},
+                {name: 'Bower', progress: .9}])

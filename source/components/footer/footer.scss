@@ -1,0 +1,222 @@
+@import '../mixins/mixins.scss';
+
+.footer {
+  width: 100%;
+  background-color: rgba(28,31,41,.85);
+  z-index: 20;
+  position: relative;
+  align-self: flex-end;
+  margin-top: -100%;
+}
+.footer_transparent {
+  background-color: transparent ;
+
+  @include laptop() {
+    background-color: transparent;
+    padding: rem(6px) rem(35px) rem(35px);
+  }
+  @include mobile() {
+    background-color: transparent;
+    padding: rem(6px) rem(35px) rem(8px);
+  }
+}
+.footer__copyright {
+  padding: rem(6px) rem(35px) rem(10px);
+  background-color: rgba(8,60,150,.85);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.71;
+  margin: 0;
+  color: #fff;
+
+  @include laptop() {
+    padding: rem(8px) rem(35px) rem(13px);
+  }
+  @include mobile() {
+    padding: rem(8px) rem(35px) rem(10px);
+  }
+}
+.footer__copyright_transparent {
+  background-color: transparent ;
+  padding: rem(6px) rem(35px) rem(35px);
+
+  @include mobile() {
+    background-color: transparent;
+    padding: rem(6px) rem(35px) rem(0px);
+  }
+}
+.footer__top {
+  margin: rem(27px);
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+
+  @include laptop() {
+    flex-wrap: wrap;
+  }
+  @include mobile() {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.footer__bottom {
+  width: 100%;
+
+  @include mobile() {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.footer__text {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.71;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+.footer__menu {
+  width: 100%;
+  margin-bottom: rem(20px);
+
+  @include mobile() {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.footer__social {
+  width: 100%;
+}
+.footer__col {
+  margin: 0 rem(34px);
+  position: relative;
+  flex: 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  @include mobile() {
+    justify-content: center;
+    margin: 0 0 rem(36px);
+    text-align: center;
+  }
+}
+.footer__col:first-child {
+  margin-left: 0;
+
+  @include laptop() {
+    justify-content: center;
+    margin: 0 0 rem(36px);
+    text-align: center;
+  }
+  @include tablet() {
+    justify-content: center;
+    margin: 0 0 rem(36px);
+    text-align: center;
+  }
+}
+.footer__col:first-child:after {
+
+  @include laptop() {
+    width: 100%;
+    height: 1px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: unset;
+    margin-top: rem(18px);
+  }
+  @include tablet() {
+    width: 100%;
+    height: 1px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: unset;
+    margin-top: rem(18px);
+  }
+}
+.footer__col:nth-child(2) {
+  @include laptop() {
+    margin-left: 0;
+    flex: 2 0;
+  }
+  @include mobile() {
+    margin-left: 0;
+    flex: 1 auto;
+  }
+}
+.footer__col:nth-child(2):after {
+  @include laptop() {
+    display: none;
+  }
+  @include mobile() {
+    display: block;
+    width: 100%;
+    height: 1px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: unset;
+    margin-top: rem(18px);
+  }
+}
+.footer__col:last-child {
+  margin-right: 0;
+
+  @include laptop() {
+    justify-content: flex-end;
+    text-align: right;
+    flex: 2 0;
+  }
+  @include mobile() {
+    justify-content: center;
+    text-align: center;
+    flex: 1 auto;
+    margin-bottom: 0;
+  }
+}
+.footer__col:after {
+  flex-grow: 1;
+  position: absolute;
+  content: "";
+  margin: 0;
+  width: 1px;
+  right: rem(-30.5px);
+  top: rem(4px);
+  min-height: 90%;
+  background-color: rgba(255,255,255,.2);
+
+  @include mobile() {
+    width: 100%;
+    height: 1px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: unset;
+    margin-top: rem(18px);
+  }
+}
+.footer__col:last-child:after {
+  background-color: transparent;
+  @include laptop() {
+    width: 100%;
+    height: 1px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: unset;
+    margin-top: rem(18px);
+  }
+}
+
+

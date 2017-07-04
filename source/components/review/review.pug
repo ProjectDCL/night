@@ -1,0 +1,25 @@
+ul.review__list
+    li.review__item
+        .review__photo-wrap
+            .review__photo
+                img.review__img(src=require('../../images/img1.jpg'))
+        .review__text
+            | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
+            | 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        .review__fio Ковальчук Дмитрий
+        .review__text — основатель Loftschool
+        .review__bg-img
+            svg.review__icon
+                use(xlink:href=require("../../images/sprite.svg") + "#feedback")
+    li.review__item
+        .review__photo-wrap
+            .review__photo
+                img.review__img(src=require('../../images/img2.jpg'))
+        .review__text
+            | Этот код выдержит любые испытания. Только пожалуйста,
+            | не загружается сайт на слишком старых браузерах!
+        .review__fio Сабанцев Владимир
+        .review__text — преподаватель
+        .review__bg-img
+            svg.review__icon
+                use(xlink:href=require("../../images/sprite.svg") + "#feedback")

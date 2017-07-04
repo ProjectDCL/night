@@ -1,0 +1,14 @@
+extends ../../components/loyout/loyout
+
+include ../../components/header/header
+include ../../components/footer/footer
+
+block head
+    title Блог
+block header
+    include ../../components/night/night
+    +header('blog')
+block content
+    include ../../components/blog-content/blog-content
+block footer
+    +footer()

@@ -1,0 +1,10 @@
+mixin contact-with-icon(items)
+    .contact-with-icon
+        .contact-with-icon__header Контакты
+        ul.contact-with-icon__list
+            each item in items
+                li.contact-with-icon__item
+                    a.contact-with-icon__link(href="#")
+                        svg.contact-with-icon__icon
+                            use(xlink:href=require("../../images/sprite.svg") + "#" + item.icon)
+                        .contact-with-icon__text #{item.text}

@@ -1,0 +1,5 @@
+mixin menu-hamburger(items)
+    ul.menu-hamburger
+        each item in items
+            li.menu-hamburger__item
+                a.menu-hamburger__link(href="/" + item.url) #{item.text}

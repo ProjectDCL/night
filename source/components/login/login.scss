@@ -1,0 +1,89 @@
+.login {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  width: rem(380px);
+  height: rem(410px);
+  padding: 0 rem(20px);
+  z-index: 20;
+  margin: 0;
+}
+.login__face, .login__back {
+  position: absolute;
+  text-align: center;
+  background-color: rgba(28,31,41,.50);;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: all 1s ease-in-out;
+}
+.login__face {
+  z-index: 22;
+  transform: rotateY(0deg);
+}
+.login__back {
+  z-index: 21;
+  transform: rotateY(180deg);
+}
+.flip {
+  .login__face {
+    transform: rotateY(180deg);
+    z-index: 23;
+  }
+
+  .login__back {
+    transform: rotateY(0deg);
+    z-index: 24;
+  }
+}
+.login__foto, .login__title, .login__text, .login__social, .login__menu, .login__form-title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.login__foto {
+  margin: rem(40px) 0 rem(10px);
+}
+.login__title {
+  font-size: rem(35px);
+  font-weight: 400;
+  font-family: "Sansus Webissimo", Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.login__text {
+  margin: 0;
+  margin-bottom: rem(21px);
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.71;
+  padding: 0;
+  opacity: .8;
+  color: #fff;
+}
+.login__social {
+  margin-bottom: rem(40px);
+}
+.login__form-title {
+  margin: rem(32px) 0 rem(22px);
+  font-size: rem(35px);
+  font-weight: 400;
+  font-family: "Sansus Webissimo", Arial, sans-serif;
+  color: #fff;
+  padding: 0;
+}
+.login__data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: rem(370px);
+  margin-bottom: rem(35px);
+}

@@ -1,0 +1,13 @@
+mixin skills(title, list)
+    .skills
+        h3.skills__title #{title}
+        ul.skills__list
+            each item in list
+                - var dasharray = 282.6*item.progress;
+                li.skills__item
+                    svg.skills__circles(viewBox='0 0 110 110')
+                        circle.skills__circle-first(r="45" cx="50%" cy="50%" fill="none" )
+                        circle.skills__circle-second(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)'
+                            style="stroke-opacity:" + item.progress + "; " +
+                            "stroke-dasharray:" + dasharray + " 282.6")
+                    span.skills__text(style="opacity:" + item.progress + ";") #{item.name}

@@ -1,0 +1,15 @@
+extends ../../components/loyout/loyout
+
+include ../../components/footer/footer
+include ../../components/header/header
+
+block head
+    title Обо мне
+block header
+    include ../../components/night/night
+    +header('about')
+block content
+    include ../../components/about-content/about-content
+    include ../../components/map/map
+block footer
+    +footer()

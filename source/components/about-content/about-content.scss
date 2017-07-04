@@ -1,0 +1,129 @@
+@import '../mixins/_mixins.scss';
+.about-content {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-content: flex-start;
+
+  @include tablet() {
+    flex-wrap: wrap;
+  }
+}
+.about-content__header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 12;
+  margin-bottom: rem(30px);
+}
+.about-content__header:first-child {
+  @include tablet() {
+    margin-top: rem(40px);
+  }
+}
+.about-content__right {
+  background-color: #eae8e2;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 0 rem(27px);
+
+  @include tablet() {
+    width: 100%;
+    flex: auto;
+    background-color: #fff;
+    justify-content: center;
+  }
+}
+.about-content__left {
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-start;
+  flex: 1;
+  padding: 0 rem(27px);
+
+  @include tablet() {
+    width: 100%;
+    flex: auto;
+    background-color: #eae8e2;
+    justify-content: center;
+  }
+
+  @include desktop() {
+    flex-wrap: wrap;
+  }
+}
+.about-content__left .about-content__col:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+
+  @include desktop() {
+    width: 100%;
+    margin-bottom: rem(60px);
+  }
+}
+.about-content__left .about-content__col:last-child {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 50%;
+
+  @include desktop() {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.about-content__img {
+  margin-bottom: rem(35px);
+}
+.about-content__description {
+  width: 95%;
+  text-align: left;
+  margin-bottom: rem(55px);
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.71;
+  padding: 0;
+  color: #474b57;
+}
+.about-content__title {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-size: rem(63px);
+  font-family: "Sansus Webissimo", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: #474b57;
+}
+.about-content__subtitle {
+  display: inline-block;
+  font-family: "Sansus Webissimo", Arial, sans-serif;
+  font-weight: 400;
+  font-size: rem(35px);
+  color: #474b57;
+  padding: 0 rem(7px) rem(25px);
+  margin:  0 rem(7px);
+  text-transform: uppercase;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: rem(90px);
+    height: 3px;
+    background-color: rgba(71,75,87,.5);
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

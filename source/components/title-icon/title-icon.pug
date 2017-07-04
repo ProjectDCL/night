@@ -1,0 +1,4 @@
+mixin title-icon(img, mod)
+    - mod = ' ' + mod || ''
+    svg(class=("title-icon") + mod)
+        use(xlink:href=require("../../images/sprite.svg") + "#" + img)

@@ -1,0 +1,23 @@
+@import '../mixins/mixins.scss';
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero__authorization {
+  position: absolute;
+  z-index: 20;
+  top: rem(24px);
+  right: rem(100px);
+
+  @include mobile() {
+    top: rem(24px);
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

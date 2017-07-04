@@ -1,0 +1,8 @@
+mixin social(mod)
+    - mod = ' ' + mod || ''
+    ul(class="social")
+        each item in ['vk','github','in']
+            li.social__item
+                a.social__link(href="#")
+                    svg(class=("social__icon") + mod)
+                        use(xlink:href=require("../../images/sprite.svg") + "#" + item)

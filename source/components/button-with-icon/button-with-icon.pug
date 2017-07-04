@@ -1,0 +1,5 @@
+mixin button-with-icon(id, text, icon)
+    a.button-with-icon(href='#' id="" + id)
+        svg.button-with-icon__img
+            use(xlink:href=require("../../images/sprite.svg") + "#" + icon)
+        |#{text}

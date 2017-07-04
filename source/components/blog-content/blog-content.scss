@@ -1,0 +1,34 @@
+@import '../mixins/mixins.scss';
+
+.blog-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  position: relative;
+  z-index: 11;
+  margin: rem(60px) rem(27px) 0;
+  padding: 0;
+}
+.blog-content__menu {
+  width: 25%;
+
+  @include tablet() {
+    display: none;
+  }
+
+  @include mobile() {
+    display: none;
+  }
+}
+.blog-content__article {
+  width: calc(75% - rem(115px));
+
+  @include tablet() {
+    width: 100%;
+  }
+
+  @include mobile() {
+    width: 100%;
+  }
+}

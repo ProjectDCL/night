@@ -1,0 +1,25 @@
+.button-with-icon {
+  background-color: #004cd1;
+  border: 1px solid #004cd1;
+  color: #fff;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  padding: rem(14px) rem(27px);
+  transition: .3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  &:hover {
+    background-color: #083c96;
+    border: 1px solid #083c96;
+  }
+}
+.button-with-icon__img {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  margin-right: 9px;
+}

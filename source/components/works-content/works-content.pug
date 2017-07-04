@@ -1,0 +1,17 @@
+section.works-content
+    .works-content__slider
+        include ../slider/slider
+    .works-content__about-me
+        .works-content__title-container
+            .works-content__title-bg
+                img(class=("works-content__title-bg-icon") src=require("../../images/star3.png"))
+            h2.works-content__title Что обо мне<br>говорят
+        .works-content__review
+            include ../review/review
+        .works-content__feedback
+            include ../feedback/feedback
+        .works-content__arrow
+            svg.works-content__arrow-icon
+                use(xlink:href=require("../../images/sprite.svg") + "#arrow_down")
+        div#js_footer
+

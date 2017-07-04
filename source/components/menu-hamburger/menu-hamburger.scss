@@ -1,0 +1,41 @@
+.menu-hamburger {
+  width: 100%;
+  height: 100vh;
+  list-style: none;
+  background-color: rgba(24,54,105,.87);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+}
+.menu-hamburger__item {
+  margin-bottom: rem(70px);
+  width: 100%;
+}
+.menu-hamburger__link {
+  text-decoration: none;
+  font-family: "Sansus Webissimo", Arial, sans-serif;
+  font-size: rem(63px);
+  color: #fff;
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  &:hover::after, &_active::after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: rem(-30px);
+    background-color: #fff;
+    width: rem(89px);
+    height: rem(3px);
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

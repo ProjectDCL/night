@@ -1,0 +1,11 @@
+import '../../components/loyout/loyout';
+import '../../components/app/app';
+import '../../components/night/night';
+import '../../components/header/header';
+import '../../components/works-content/works-content';
+import '../../components/footer/footer';
+
+import js_paralax_header from '../../components/header/header';
+js_paralax_header();
+
+console.log('in works.js');

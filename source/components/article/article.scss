@@ -1,0 +1,32 @@
+.article {
+  max-width: rem(880px);
+  border-bottom: 5px solid rgba(55,62,66,.07);
+  padding-bottom: rem(70px);
+  margin-bottom: rem(70px);
+  display: block;
+  &:last-of-type {
+    border-bottom: none;
+    padding: 0;
+  }
+}
+.article__header {
+  font-family: "Sansus Webissimo", Arial, sans-serif;
+  font-size: rem(35.02px);
+  color: #474b57;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: rem(20px);
+  padding: 0;
+}
+.article__date {
+  font-weight: 400;
+  color: rgba(8,60,150,.7);
+  margin: 0;
+  padding: 0;
+  margin-bottom: rem(25px);
+}
+.article__content {
+  font-weight: 400;
+  color: #455a64;
+  line-height: 1.62;
+}
