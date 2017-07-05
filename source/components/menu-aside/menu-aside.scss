@@ -1,7 +1,26 @@
+@import '../mixins/mixins.scss';
+
+
 .menu-aside {
   justify-content: flex-end;
   align-items: flex-start;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 12;
+
+  @include tablet() {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include mobile() {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 .menu-aside__item {
   margin: 0;
@@ -23,7 +42,16 @@
   color: #455a64;
   white-space: normal;
   margin-bottom: rem(15px);
-  &:hover,&:active,&:focus {
+
+  @include tablet() {
+    color: #fff;
+  }
+
+  @include mobile() {
+    color: #fff;
+  }
+
+  &:hover,&_active {
     color: #0548be;
     font-weight: 700;
     &::after {
@@ -34,6 +62,23 @@
       height: 100%;
       width: 3px;
       background-color: #0548be;
+      @include tablet() {
+        display: none;
+      }
+      @include mobile() {
+        display: none;
+      }
+    }
+
+    @include tablet() {
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    @include mobile() {
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
     }
   }
   &:last-child {

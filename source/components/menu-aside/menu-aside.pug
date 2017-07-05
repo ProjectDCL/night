@@ -1,7 +1,6 @@
-mixin menu-aside(items, mod)
-    - mod = ' ' + mod || ''
-    ul(class="menu-aside" + mod)
+mixin menu-aside(items)
+    ul.menu-aside
         each item in items
             li.menu-aside__item
                 - item.id = item.id || ''
-                a.menu-aside__link(href="" + item.url id="" + item.id) #{item.text}
+                a.menu-aside__link(href="" + item.url id="" + item.id data-id="" + item.data) #{item.text}

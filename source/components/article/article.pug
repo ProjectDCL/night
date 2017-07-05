@@ -1,5 +1,6 @@
-mixin article(header, date, content)
-    article.article
+mixin article(header, date, content, data)
+    article.article(data-id="" + data)
+        a.article__link(name="" + data)
         h2.article__header #{header}
         .article__date #{date}
         .article__content #{content}
