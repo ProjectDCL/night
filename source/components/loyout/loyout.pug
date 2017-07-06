@@ -20,8 +20,9 @@ html
         <![endif]-->
     body
         .preloader
-            svg.preloader__icon
-                use(xlink:href=require("../../images/sprite.svg") + "#p_night")
+            span.preloader__loader 0%
+            //svg.preloader__icon
+             //   use(xlink:href=require("../../images/sprite.svg") + "#p_night")
         .main-menu
             +menu-hamburger([{url: "works.html", text: 'Мои работы'},{url: "about.html", text: 'Обо мне'},{url: "blog.html", text: 'Блог'},{url: "index.html", text: 'Авторизация'}])
         .hamburger-button

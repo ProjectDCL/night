@@ -7,6 +7,9 @@ import '../../components/night/night';
 import '../../components/footer/footer';
 
 import js_flip_login from '../../components/login/login';
+import js_arrow_scrol from '../../components/loyout/loyout';
+
 js_flip_login();
+js_arrow_scrol();
 
 console.log('in index.js');

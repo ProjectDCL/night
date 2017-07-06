@@ -11,11 +11,33 @@ svg4everybody();
 hamburger();
 
 export default function () {
-    let arrow = (function () {
+    let loyout = (function () {
         let arrow_up = $('#js_up'),
             arrow_down = $('#js_down'),
             offset_up = 0,
-            offset_down = $('#js_scroll_link_one').offset().top;
+            offset_down = $('#js_scroll_link_one').offset().top,
+            images = document.images,
+            images_total_count = images.length,
+            images_loaded_count = 0,
+            preloader = $('.preloader'),
+            preloader__loader = $('.preloader__loader'),
+            images_loaded = function () {
+                images_loaded_count++;
+                preloader__loader.text(((100 / images_total_count * images_loaded_count) << 0) + '%');
+                console.log(images_loaded_count);
+
+                console.log(images_total_count);
+                console.log(((100 / images_total_count * images_loaded_count) << 0) + '%');
+
+                if(images_loaded_count >= images_total_count) {
+                    setTimeout(function () {
+                        if( !preloader.hasClass('preloader_done')) {
+                            preloader.addClass('preloader_done');
+                        }
+                    }, 500);
+                }
+            };
+
 
         return {
             up: function () {
@@ -36,9 +58,20 @@ export default function () {
                     });
                 });
             },
+            preload: function () {
+                $(document).ready(function() {
+                    for(let i = 0; i < images_total_count; i++) {
+                        let image_clone = new Image();
+                        image_clone.onload = images_loaded;
+                        image_clone.onerror = images_loaded;
+                        image_clone.src = images[i].src;
+                    }
+                });
+            },
         };
     }());
 
-    arrow.up();
-    arrow.down();
+    loyout.up();
+    loyout.down();
+    loyout.preload();
 }

@@ -75,10 +75,34 @@ a {
   bottom: 0;
   right: 0;
   background: url("../../images/night_prel_bg.jpg") center no-repeat;
+  background-color: #223b65;
   background-size: cover;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_done {
+    animation: preloader_done .5s;
+    animation-fill-mode: forwards;
+  }
+}
+.preloader__loader {
+  color: #fff;
+  font-size: 16px;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
 }
 .preloader__icon {
   fill: #000;
   stroke: #000;
+}
+@keyframes preloader_done {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
