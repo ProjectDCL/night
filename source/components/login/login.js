@@ -20,9 +20,8 @@ export default function () {
         flip_face();
     });
 
-    $(window).load(function () {
-        setTimeout(function () {
-            $('#js_login').addClass('login_show');
-        }, 1000);
-    }());
+
+    window.onload = setTimeout(() =>
+    {$('#js_login').addClass('login_show');}
+        , 1000);
 }

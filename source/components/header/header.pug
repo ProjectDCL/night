@@ -6,7 +6,7 @@ mixin header(type)
     case type
         when 'blog'
             header.header
-                .header__arrow
+                .header__arrow#js_down
                     svg.header__arrow-icon
                         use(xlink:href=require("../../images/sprite.svg") + "#arrow_down")
                 .header__social
@@ -26,12 +26,12 @@ mixin header(type)
                         polygon.header__traingle-right(points='1000,0   1000,86   500,86   500,75.5')
         when 'about'
             header.header
-                .header__arrow
+                .header__arrow#js_down
                     svg.header__arrow-icon
                         use(xlink:href=require("../../images/sprite.svg") + "#arrow_down")
                 .header__social
                     +social('social_white')
-                .header__content
+                .header__content#js_parallax_hero
                     .header__content-bg
                         img(class=("header__content-bg-icon") src=require("../../images/star1.png"))
                     .header__foto
@@ -45,12 +45,12 @@ mixin header(type)
                         polygon.header__traingle-right.header__traingle_gray(points='1000,0   1000,86   500.8,86   500.8,75.5')
         when 'works'
             header.header
-                .header__arrow.header__arrow_bottom
+                .header__arrow.header__arrow_bottom#js_down
                     svg.header__arrow-icon
                         use(xlink:href=require("../../images/sprite.svg") + "#arrow_down")
                 .header__social
                     +social('social_white')
-                .header__content
+                .header__content#js_parallax_hero
                     .header__content-bg
                         img(class=("header__content-bg-icon") src=require("../../images/star1.png"))
                     .header__foto

@@ -6,6 +6,10 @@ import '../../components/works-content/works-content';
 import '../../components/footer/footer';
 
 import js_paralax_header from '../../components/header/header';
+import js_arrow_scrol from '../../components/loyout/loyout';
+
 js_paralax_header();
+js_arrow_scrol();
+
 
 console.log('in works.js');

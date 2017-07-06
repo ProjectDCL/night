@@ -2,6 +2,7 @@ extends ../../components/loyout/loyout
 
 include ../../components/header/header
 include ../../components/footer/footer
+include ../../components/menu-aside-mobile/menu-aside-mobile
 
 block head
     title Блог
@@ -9,6 +10,10 @@ block header
     include ../../components/night/night
     +header('blog')
 block content
+    +menu-aside-mobile([{url: "#article_1", text: 'Самое важное в SASS', id: 'js_article_1', data: 'article_1'},
+        {url: "#article_2", text: 'Приёмы в вёрстке, без которых не обходится ни один сайт', id: 'js_article_2', data: 'article_2'},
+        {url: "#article_3", text: 'Самый необходимый набор Gulp плагинов', id: 'js_article_3', data: 'article_3'},
+        {url: "#article_4", text: 'Почему я выбрал Jade', id: 'js_article_4', data: 'article_4'}])
     include ../../components/blog-content/blog-content
 block footer
     +footer()

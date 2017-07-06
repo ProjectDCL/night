@@ -1,7 +1,7 @@
-import './menu-aside.scss';
+import './menu-aside-mobile.scss';
 
 export default function () {
-    let menuAside = (function () {
+    let menuAsideMobile = (function () {
         let checkDistance = function (scrollTop, element) {
             let offset = element.offset().top,
                 windowMargin = Math.ceil($(window).height() / 6),
@@ -17,22 +17,22 @@ export default function () {
                 $(window).on('scroll', function () {
                     let scrollTop = $(window).scrollTop(),
                         elements = $('.article'),
-                        menu = $('.menu-aside');
+                        menu = $('.menu-aside-mobile__list');
 
                     elements.each(function () {
                         let $this = $(this);
                         if (checkDistance(scrollTop, $(this))) {
                             let data_id = $this.data('id');
 
-                            menu.find($('.menu-aside__link')).removeClass('menu-aside__link_active');
-                            menu.find('[data-id="' + data_id + '"]').addClass('menu-aside__link_active');
+                            menu.find($('.menu-aside-mobile__link')).removeClass('menu-aside-mobile__link_active');
+                            menu.find('[data-id="' + data_id + '"]').addClass('menu-aside-mobile__link_active');
                         }
                     });
                 });
             },
             click: function () {
                 $(document).ready(function() {
-                    $('.menu-aside__link').click(function (e) {
+                    $('.menu-aside-mobile__link').click(function (e) {
                         e.preventDefault();
                         let $this = $(this),
                             data_id = $this.data('id'),
@@ -42,9 +42,27 @@ export default function () {
                     });
                 });
             },
+            toggle: function () {
+                let button = $('.menu-aside-mobile__button'),
+                    menu = $('.menu-aside-mobile');
+                $(document).ready(function() {
+                    button.click(function (e) {
+                        e.preventDefault();
+
+                        if (menu.hasClass('menu-aside-mobile_show')) {
+                            menu.removeClass('menu-aside-mobile_show').addClass('menu-aside-mobile_hide');
+                        } else if (menu.hasClass('menu-aside-mobile_hide')){
+                            menu.removeClass('menu-aside-mobile_hide').addClass('menu-aside-mobile_show');
+                        } else {
+                            menu.removeClass('menu-aside-mobile_hide').addClass('menu-aside-mobile_show');
+                        }
+                    });
+                });
+            },
         };
     }());
 
-    menuAside.scroll();
-    menuAside.click();
+    menuAsideMobile.scroll();
+    menuAsideMobile.click();
+    menuAsideMobile.toggle();
 }

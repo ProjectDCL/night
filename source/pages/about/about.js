@@ -9,6 +9,9 @@ import '../../components/footer/footer';
 
 
 import js_paralax_header from '../../components/header/header';
+import js_arrow_scrol from '../../components/loyout/loyout';
+
+js_arrow_scrol();
 js_paralax_header();
 
 console.log('in about.js');

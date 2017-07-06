@@ -1,13 +1,12 @@
 include ../menu-aside/menu-aside
 include ../article/article
 
-section.blog-content
+section.blog-content#js_scroll_link_one
     aside.blog-content__menu
         +menu-aside([{url: "#article_1", text: 'Самое важное в SASS', id: 'js_article_1', data: 'article_1'},
             {url: "#article_2", text: 'Приёмы в вёрстке, без которых не обходится ни один сайт', id: 'js_article_2', data: 'article_2'},
             {url: "#article_3", text: 'Самый необходимый набор Gulp плагинов', id: 'js_article_3', data: 'article_3'},
             {url: "#article_4", text: 'Почему я выбрал Jade', id: 'js_article_4', data: 'article_4'}])
-    a.blog-content__button-menu#js_blog-content__button-menu(href="#")
     main.blog-content__article
         +article('Самое важное в SASS','22 ноября 2016',
             'Таким образом начало повседневной работы по формированию позиции позволяет выполнять ' +

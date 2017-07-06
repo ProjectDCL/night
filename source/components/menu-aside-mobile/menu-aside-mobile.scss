@@ -1,0 +1,110 @@
+@import '../mixins/mixins.scss';
+
+.menu-aside-mobile {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    width: 70%;
+    height: 100vh;
+    z-index: 30;
+    top: 0;
+    left: -70%;
+    background-color: #253468;
+    box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, .2);
+  }
+  @include mobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    width: 70%;
+    height: 100vh;
+    z-index: 30;
+    top: 0;
+    left: -70%;
+    background-color: #253468;
+    box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, .2);
+  }
+}
+.menu-aside-mobile__list {
+  background-color: #253468;
+  z-index: 32;
+}
+.menu-aside-mobile__item {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.menu-aside-mobile__link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: rem(15px) rem(17px);
+  text-align: right;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255,255,255,.7);
+  white-space: normal;
+  margin-bottom: rem(15px);
+
+  &:hover,&_active {
+    color: #fff;
+    font-weight: 700;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.menu-aside-mobile__button {
+  z-index: 30;
+  background-color: #253468;
+  box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, .2);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  right: -20px;
+}
+.menu-aside-mobile__link_active {
+  color: #fff;
+  font-weight: 700;
+}
+
+
+.menu-aside-mobile_show {
+  animation: menu-aside-mobile_show 1s;
+  animation-fill-mode: forwards;
+}
+.menu-aside-mobile_hide {
+  animation: menu-aside-mobile_hide 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu-aside-mobile_show {
+  from {
+    opacity: 1;
+    left: -70%;
+  }
+  to {
+    opacity: 1;
+    left: -1px;
+  }
+}
+@keyframes menu-aside-mobile_hide {
+  from {
+    opacity: 1;
+    left: -1px;
+  }
+  to {
+    opacity: 1;
+    left: -70%;
+  }
+}

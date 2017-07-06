@@ -1,0 +1,8 @@
+mixin menu-aside-mobile(items)
+    .menu-aside-mobile
+        ul.menu-aside-mobile__list
+            each item in items
+                li.menu-aside-mobile__item
+                    - item.id = item.id || ''
+                    a.menu-aside-mobile__link(href="" + item.url id="" + item.id data-id="" + item.data) #{item.text}
+        a.menu-aside-mobile__button(href="#")

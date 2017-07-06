@@ -3,12 +3,10 @@ import '../menu-aside/menu-aside';
 import '../article/article';
 
 export default function () {
-    let menuScroll = (function () {
+    let scroll = (function () {
         let menu = $('.blog-content__menu'),
-            button = $('.blog-content__button-menu'),
+            button = $('#js_blog-content__button-menu'),
             pos = menu.offset().top;
-
-        menu.width(menu.width());
 
         return {
             init: function () {
@@ -25,32 +23,5 @@ export default function () {
         };
     }());
 
-    let menuShow = (function () {
-        let button = $('#js_blog-content__button-menu'),
-            element = $('.blog-content__menu');
-
-        return {
-            init: function () {
-                button.on('click', function (e) {
-                    e.preventDefault();
-
-                    if (element.hasClass('blog-content__menu_show') || button.hasClass('blog-content__button-menu_show')) {
-                        element.removeClass('blog-content__menu_show');
-                        button.removeClass('blog-content__button-menu_show');
-                        element.addClass('blog-content__menu_hide');
-                        button.addClass('blog-content__button-menu_hide');
-                    } else {
-                        element.removeClass('blog-content__menu_hide');
-                        button.removeClass('blog-content__button-menu_hide');
-                        element.addClass('blog-content__menu_show');
-                        button.addClass('blog-content__button-menu_show');
-                    }
-                });
-            },
-        };
-
-    }());
-
-    menuScroll.init();
-    menuShow.init();
+    scroll.init();
 }

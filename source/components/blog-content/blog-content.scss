@@ -17,19 +17,11 @@
   z-index: 12;
 
   @include tablet() {
-    opacity: 0;
-    position: absolute;
-    left: -50vw;
-    top: rem(-60px);
-    width: 50vw;
-    background-color: #183669;
-    height: 100vh;
+    display: none;
   }
 
   @include mobile() {
     display: none;
-    background-color: #183669;
-    height: 100vh;
   }
 
   &_sticky {
@@ -37,16 +29,6 @@
     top: 0;
     left: 0;
     margin: rem(27px) 0;
-
-    @include tablet() {
-      margin: 0;
-      left: -50vw;
-    }
-
-    @include mobile() {
-      margin: 0;
-      left: -50vw;
-    }
   }
 }
 .blog-content__article {
@@ -64,94 +46,5 @@
     width: 100%;
     margin-left: 0;
     padding-left: rem(27px);
-  }
-}
-.blog-content__button-menu {
-  z-index: 11;
-  @include tablet() {
-    background-color: #183669;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    left: -60px;
-    top: 50vh;
-    transform: translateY(-50%);
-  }
-
-  @include mobile() {
-    background-color: #183669;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    right: -30px;
-    top: 50vh;
-    transform: translateY(-50%);
-  }
-
-  &_sticky {
-    position: fixed;
-    top: 50vh;
-    transform: translateY(-50%);
-  }
-}
-.blog-content__button-menu_show {
-  animation: blog-content__button-menu_show 1s;
-  animation-fill-mode: forwards;
-}
-.blog-content__button-menu_hide {
-  animation: blog-content__button-menu_hide 1s;
-  animation-fill-mode: forwards;
-}
-@keyframes blog-content__button-menu_show {
-  from {
-    opacity: 1;
-    left: -60px;
-  }
-  to {
-    opacity: 1;
-    left: calc(50vw - 60px);
-  }
-}
-@keyframes blog-content__button-menu_hide {
-  from {
-    opacity: 1;
-    left: calc(50vw - 60px);
-  }
-  to {
-    opacity: 1;
-    left: -60px;
-  }
-}
-.blog-content__menu_show {
-  animation: blog-content__menu_show 1s;
-  animation-fill-mode: forwards;
-}
-.blog-content__menu_hide {
-  animation: blog-content__menu_hide 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes blog-content__menu_show {
-  from {
-    opacity: 1;
-    left: -50vw;
-  }
-  to {
-    opacity: 1;
-    left: 0;
-  }
-}
-@keyframes blog-content__menu_hide {
-  from {
-    opacity: 1;
-    left: 0;
-  }
-  to {
-    opacity: 1;
-    left: -50vw;
   }
 }
