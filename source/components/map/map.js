@@ -17,6 +17,7 @@ export default function () {
                 GoogleMapsLoader.load(function(google) {
                     let mapOptions = {
                         zoom: 16,
+                        scrollwheel: false,
                         center: new google.maps.LatLng(40.837099, 69.617920),
                         styles: [{'featureType':'administrative','elementType':'labels.text.fill','stylers':[{'color':'#444444'}]},
                             {'featureType':'landscape','elementType':'all','stylers':[{'color':'#f2f2f2'}]},
