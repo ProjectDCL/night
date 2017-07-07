@@ -19,9 +19,4 @@ export default function () {
         e.preventDefault();
         flip_face();
     });
-
-
-    window.onload = setTimeout(() =>
-    {$('#js_login').addClass('login_show');}
-        , 1000);
 }

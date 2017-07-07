@@ -21,20 +21,25 @@ export default function () {
             images_loaded_count = 0,
             preloader = $('.preloader'),
             preloader__loader = $('.preloader__loader'),
+            preloader__circle_second = $('.preloader__circle-second'),
+            preloader__circle_external = $('.preloader__circle-external'),
             images_loaded = function () {
                 images_loaded_count++;
-                preloader__loader.text(((100 / images_total_count * images_loaded_count) << 0) + '%');
-                console.log(images_loaded_count);
 
-                console.log(images_total_count);
-                console.log(((100 / images_total_count * images_loaded_count) << 0) + '%');
+                let percent = ((100 / images_total_count * images_loaded_count) << 0);
+                if (percent >= 1) {
+                    preloader__circle_external.addClass('preloader__circle-external_rotation');
+                }
+                preloader__loader.text(percent + '%');
+                preloader__circle_second.css('stroke-dasharray', (percent * 282.6 / 100) + ' 282.6');
 
                 if(images_loaded_count >= images_total_count) {
                     setTimeout(function () {
                         if( !preloader.hasClass('preloader_done')) {
                             preloader.addClass('preloader_done');
+                            $('#js_login').addClass('login_show');
                         }
-                    }, 500);
+                    }, 1500);
                 }
             };
 

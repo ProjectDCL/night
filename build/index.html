@@ -12,8 +12,15 @@
   <link href="./assets/css/vendor.css" rel="stylesheet"><link href="./assets/css/common.css" rel="stylesheet"><link href="./assets/css/index.css" rel="stylesheet"></head>
   <body>
     <div class="preloader"><span class="preloader__loader">0%</span>
-      <!--svg.preloader__icon//   use(xlink:href=require("../../images/sprite.svg") + "#p_night")
-      -->
+      <div class="preloader__circle">
+        <svg class="preloader__icon" viewBox="0 0 110 110">
+          <circle class="preloader__circle-first" r="45" cx="50%" cy="50%" fill="none"></circle>
+          <circle class="preloader__circle-second" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" style="stroke-dasharray: 0 282.6;"></circle>
+        </svg>
+        <div class="preloader__circle-external">
+          <div class="preloader__circle-internal"></div>
+        </div>
+      </div>
     </div>
     <div class="main-menu">
       <ul class="menu-hamburger">

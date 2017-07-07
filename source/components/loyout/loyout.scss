@@ -92,6 +92,7 @@ a {
   font-size: 16px;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 400;
+  position: absolute;
 }
 .preloader__icon {
   fill: #000;
@@ -105,4 +106,55 @@ a {
     opacity: 0;
     visibility: hidden;
   }
+}
+.preloader__circle {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+}
+.preloader__icon {
+  fill: none;
+  stroke-width: 5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.preloader__circle-first {
+  stroke: transperent;
+  stroke-opacity: 0;
+}
+.preloader__circle-second {
+  stroke: #fff;
+  transition: all 1s;
+}
+.preloader__circle-external {
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+}
+.preloader__circle-external_rotation {
+  animation:preloader__circle-external_rotation 2s cubic-bezier(0.90,0.4,0.55,.9) infinite;
+}
+@keyframes preloader__circle-external_rotation{
+  0%{
+    transform:rotate(0deg);
+    opacity: 1;
+  }
+  100%{
+    transform:rotate(720deg);
+    opacity: 1;
+  }
+}
+.preloader__circle-internal {
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
 }

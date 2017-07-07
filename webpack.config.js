@@ -18,7 +18,7 @@ const PATHS = {
 const common = merge([
     {
         entry: {
-            vendor : ['jquery', 'svg4everybody', 'normalize.css'],
+            vendor : ['jquery', 'svg4everybody', 'google-maps', 'normalize.css'],
             'index' : PATHS.source + '/pages/index/index.js',
             'blog' : PATHS.source + '/pages/blog/blog.js',
             'about' : PATHS.source + '/pages/about/about.js',
