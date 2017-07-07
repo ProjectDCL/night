@@ -18,7 +18,7 @@ include ../foto/foto
                 .login__data
                     +input('login', 'login', 'Логин', 'input_login')
                     +input('password', 'password', 'Пароль', 'input_password')
-                    +input('checkbox', 'checkbox', 'Я человек', 'input_checkbox')
+                    +input('checkbox', 'js_man', 'Я человек', 'input_checkbox')
                     .login__text Вы точно не робот?
-                    +input('radio', 'robot', 'Я не робот', 'input_radio')
+                    +input('radio', 'js_man_sure', 'Я не робот', 'input_radio')
                 +menu([{url: "#", text: 'На главную', id: 'js_login_flip_face'}, {url: "#", text: 'Войти', id: 'js_go_login'}], 'menu_login-back')

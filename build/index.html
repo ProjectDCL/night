@@ -11,7 +11,11 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   <link href="./assets/css/vendor.css" rel="stylesheet"><link href="./assets/css/common.css" rel="stylesheet"><link href="./assets/css/index.css" rel="stylesheet"></head>
   <body>
-    <div class="preloader"><span class="preloader__loader">0%</span>
+<div class="message__bg" id="js_message_bg"></div>
+<div class="message" id="js_message">
+  <div class="message__text" id="js_message__text">Ошибка</div><a class="message__close" id="js_message__close" href="#"></a>
+</div>
+    <div class="preloader"><span class="preloader__loader">0</span>
       <div class="preloader__circle">
         <svg class="preloader__icon" viewBox="0 0 110 110">
           <circle class="preloader__circle-first" r="45" cx="50%" cy="50%" fill="none"></circle>
@@ -34,6 +38,7 @@
     </div>
     <div class="wrapper">
       <div class="hero">
+        <div class="hero__flip-face" id="js_hero_flip_face"></div>
         <div class="hero__authorization"><a class="button undefined" href="#" id="js_login_flip_back">Авторизация</a>
         </div>
         <div class="login" id="js_login">
@@ -76,7 +81,7 @@
               <form>
                 <div class="login__data">
                           <div class="input__container">
-                            <input class="input input_login" id="login" name="login" placeholder="Логин" type="text">
+                            <input class="input input_login" id="login" name="login" placeholder="Логин" type="text" required>
                             <label class="input__icon-label" for="login">
                               <svg class="input__icon">
                                 <use xlink:href="./assets/images/sprite.svg#login"></use>
@@ -84,7 +89,7 @@
                             </label>
                           </div>
                           <div class="input__container">
-                            <input class="input input_password" id="password" name="password" placeholder="Пароль" type="password">
+                            <input class="input input_password" id="password" name="password" placeholder="Пароль" type="password" required>
                             <label class="input__icon-label" for="password">
                               <svg class="input__icon">
                                 <use xlink:href="./assets/images/sprite.svg#password"></use>
@@ -92,16 +97,16 @@
                             </label>
                           </div>
                           <div class="input__container">
-                            <input class="input input_checkbox" id="checkbox" name="checkbox" type="checkbox">
-                            <label class="input__checkbox-check" for="checkbox"></label>
-                            <label class="input__checkbox-label" for="checkbox">Я человек</label>
+                            <input class="input input_checkbox" id="js_man" name="js_man" type="checkbox">
+                            <label class="input__checkbox-check" for="js_man"></label>
+                            <label class="input__checkbox-label" for="js_man">Я человек</label>
                           </div>
                   <div class="login__text">Вы точно не робот?</div>
                           <div class="input__container">
-                            <input class="input input_radio" id="yes_robot" name="robot" type="radio" value="yes">
-                            <label class="input__radio-label" for="yes_robot">Да</label>
-                            <input class="input input_radio" id="no_robot" name="robot" type="radio" value="no">
-                            <label class="input__radio-label" for="no_robot">Не уверен</label>
+                            <input class="input input_radio" id="yes_js_man_sure" name="js_man_sure" type="radio" value="yes">
+                            <label class="input__radio-label" for="yes_js_man_sure">Да</label>
+                            <input class="input input_radio" id="no_js_man_sure" name="js_man_sure" type="radio" value="no">
+                            <label class="input__radio-label" for="no_js_man_sure">Не уверен</label>
                           </div>
                 </div>
                 <ul class="menu  menu_login-back">

@@ -4,12 +4,12 @@ mixin input(type, id, placeholder, mod)
     .input__container
         case type
             when 'login'
-                input(id="" + id name="" + id class="input" + ' ' + mod placeholder="" + placeholder type="text")
+                input(id="" + id name="" + id class="input" + ' ' + mod placeholder="" + placeholder type="text" required)
                 label(for="" + id class="input__icon-label")
                     svg(class=("input__icon"))
                         use(xlink:href=require("../../images/sprite.svg") + "#login")
             when 'password'
-                input(id="" + id name="" + id class="input" + ' ' + mod placeholder="" + placeholder type="password")
+                input(id="" + id name="" + id class="input" + ' ' + mod placeholder="" + placeholder type="password" required)
                 label(for="" + id class="input__icon-label")
                     svg(class=("input__icon"))
                         use(xlink:href=require("../../images/sprite.svg") + "#password")

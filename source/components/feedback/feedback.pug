@@ -4,9 +4,9 @@ div.feedback
     .feedback__header Связаться со мной
     form
         .feedback__data
-            input.feedback__input(placeholder="Ваше имя")
-            input.feedback__input(placeholder="Ваш email")
-            textarea.feedback__textarea(placeholder="Ваше сообщение" rows="5")
+            input.feedback__input#js_feedback__input_name(placeholder="Ваше имя" required maxlength="50" minlength="2")
+            input.feedback__input#js_feedback__input_email(placeholder="Ваш email" required maxlength="50" minlength="4")
+            textarea.feedback__textarea#js_feedback__input_text(placeholder="Ваше сообщение" rows="5" required maxlength="1000")
         .feedback__button
             +button('js_feedback_send', 'Отправить', 'button_blue button_half-block')
-            +button('js_feedback_clear', 'Очистить', 'button_transparent button_half-block')
+            input.button.button_transparent.button_half-block(type="reset" value="Очистить")

@@ -11,7 +11,11 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   <link href="./assets/css/vendor.css" rel="stylesheet"><link href="./assets/css/common.css" rel="stylesheet"><link href="./assets/css/works.css" rel="stylesheet"></head>
   <body>
-    <div class="preloader"><span class="preloader__loader">0%</span>
+<div class="message__bg" id="js_message_bg"></div>
+<div class="message" id="js_message">
+  <div class="message__text" id="js_message__text">Ошибка</div><a class="message__close" id="js_message__close" href="#"></a>
+</div>
+    <div class="preloader"><span class="preloader__loader">0</span>
       <div class="preloader__circle">
         <svg class="preloader__icon" viewBox="0 0 110 110">
           <circle class="preloader__circle-first" r="45" cx="50%" cy="50%" fill="none"></circle>
@@ -157,11 +161,12 @@
               <div class="feedback__header">Связаться со мной</div>
               <form>
                 <div class="feedback__data">
-                  <input class="feedback__input" placeholder="Ваше имя">
-                  <input class="feedback__input" placeholder="Ваш email">
-                  <textarea class="feedback__textarea" placeholder="Ваше сообщение" rows="5"></textarea>
+                  <input class="feedback__input" id="js_feedback__input_name" placeholder="Ваше имя" required maxlength="50" minlength="2">
+                  <input class="feedback__input" id="js_feedback__input_email" placeholder="Ваш email" required maxlength="50" minlength="4">
+                  <textarea class="feedback__textarea" id="js_feedback__input_text" placeholder="Ваше сообщение" rows="5" required maxlength="1000"></textarea>
                 </div>
-                <div class="feedback__button"><a class="button button_blue button_half-block" href="#" id="js_feedback_send">Отправить</a><a class="button button_transparent button_half-block" href="#" id="js_feedback_clear">Очистить</a>
+                <div class="feedback__button"><a class="button button_blue button_half-block" href="#" id="js_feedback_send">Отправить</a>
+                  <input class="button button_transparent button_half-block" type="reset" value="Очистить">
                 </div>
               </form>
             </div>

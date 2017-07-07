@@ -10,6 +10,7 @@
   padding: 0 rem(20px);
   margin: auto;
   opacity: 0;
+  z-index: 21;
 }
 .login__face, .login__back {
   position: absolute;
@@ -20,22 +21,22 @@
   transition: all 1s ease-in-out;
 }
 .login__face {
-  z-index: 22;
+  z-index: 23;
   transform: rotateY(0deg);
 }
 .login__back {
-  z-index: 21;
+  z-index: 22;
   transform: rotateY(180deg);
 }
 .flip {
   .login__face {
     transform: rotateY(180deg);
-    z-index: 23;
+    z-index: 24;
   }
 
   .login__back {
     transform: rotateY(0deg);
-    z-index: 24;
+    z-index: 25;
   }
 }
 .login__foto, .login__title, .login__text, .login__social, .login__menu, .login__form-title {
@@ -89,7 +90,7 @@
 }
 .login_show {
   animation: login_show 1.5s;
-  animation-delay: 1ms;
+  animation-delay: .7s;
   animation-fill-mode: forwards;
   transform-origin: top;
 }

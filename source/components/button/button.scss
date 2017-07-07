@@ -23,6 +23,7 @@
 }
 .button_transparent {
   border: 1px solid transparent;
+  background: transparent;
   color: rgba(255,255,255,.5);
   &:hover, &:active, &:focus {
     color: #fff;

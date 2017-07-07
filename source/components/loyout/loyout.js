@@ -3,12 +3,15 @@ import './loyout.scss';
 import '../../fonts/fonts';
 import '../wrapper/wrapper';
 import '../menu-hamburger/menu-hamburger';
+import '../message/message';
 
 import svg4everybody from 'svg4everybody';
 import hamburger from '../button-hamburger/button-hamburger';
+import js_message_close from '../message/message';
 
 svg4everybody();
 hamburger();
+js_message_close();
 
 export default function () {
     let loyout = (function () {
@@ -30,7 +33,7 @@ export default function () {
                 if (percent >= 1) {
                     preloader__circle_external.addClass('preloader__circle-external_rotation');
                 }
-                preloader__loader.text(percent + '%');
+                preloader__loader.html(percent);
                 preloader__circle_second.css('stroke-dasharray', (percent * 282.6 / 100) + ' 282.6');
 
                 if(images_loaded_count >= images_total_count) {
@@ -39,7 +42,7 @@ export default function () {
                             preloader.addClass('preloader_done');
                             $('#js_login').addClass('login_show');
                         }
-                    }, 1500);
+                    }, 500);
                 }
             };
 
