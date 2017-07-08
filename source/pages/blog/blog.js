@@ -13,11 +13,13 @@ import js_menu_aside_mobile from '../../components/menu-aside-mobile/menu-aside-
 import js_blog_content from '../../components/blog-content/blog-content';
 import js_arrow_scrol from '../../components/loyout/loyout';
 
-footer();
-js_parallax_header();
-js_menu_aside();
-js_menu_aside_mobile();
-js_blog_content();
-js_arrow_scrol();
+$(document).ready(() => {
+    footer();
+    js_parallax_header();
+    js_menu_aside();
+    js_menu_aside_mobile();
+    js_blog_content();
+    js_arrow_scrol();
+});
 
 console.log('in blog.js');

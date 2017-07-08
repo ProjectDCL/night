@@ -10,11 +10,24 @@ include ../button-with-icon/button-with-icon
                 +button-with-icon('js_show_site', 'Посмотреть сайт', 'link')
     .slider__display.slider__col_right
         .slider__display-container
-            img(src=require("../../images/slide1.png") alt="").slider__display-img
+            .slider__preloader Загрузка...
+                .slider__preloader-spinner
+                    .slider__preloader-animation
+            img(src=require("../../images/slider/slide_1.png") alt="").slider__display-img
     .slider__button-control
         a(href="#").slider__button.slider__button_left
-            svg(class=("slider__icon"))
+            ul.slider__button-list
+                - for (var i = 1; i <= 4; i++)
+                    li.slider__button-item(class=`${(i == 4) ? 'slider__button-item_active' : ''}`)
+                        img.slider__button-img(src=require(`../../images/slider/slide_${i}_min.png`), alt='' data-img=require(`../../images/slider/slide_${i}.png`))
+            svg(class=("slider__button-icon"))
                 use(xlink:href=require("../../images/sprite.svg") + "#portf_arrow_down")
+            .slider__button-bg
         a(href="#").slider__button.slider__button_right
-            svg(class=("slider__icon"))
+            ul.slider__button-list
+                - for (var i = 1; i <= 4; i++)
+                    li.slider__button-item(class=`${(i == 2) ? 'slider__button-item_active' : ''}`)
+                        img.slider__button-img(src=require(`../../images/slider/slide_${i}_min.png`), alt='' data-img=require(`../../images/slider/slide_${i}.png`))
+            svg(class=("slider__button-icon"))
                 use(xlink:href=require("../../images/sprite.svg") + "#portf_arrow_up")
+            .slider__button-bg

@@ -12,8 +12,9 @@ import js_paralax_header from '../../components/header/header';
 import js_arrow_scrol from '../../components/loyout/loyout';
 import js_map from '../../components/map/map';
 
-js_map();
-js_arrow_scrol();
-js_paralax_header();
-
+$(document).ready(() => {
+    js_map();
+    js_arrow_scrol();
+    js_paralax_header();
+});
 console.log('in about.js');
