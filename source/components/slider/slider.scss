@@ -172,6 +172,10 @@
 }
 .slider__desc-info {
   margin: auto;
+  max-width: rem(325px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .slider__button-list {
   position: absolute;
@@ -271,5 +275,28 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+.slider__text-animate {
+  display: inline-block;
+  animation: spanShow .5s linear forwards;
+}
+@keyframes spanShow {
+  0% {
+    transform: scale(.3);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(.7);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }

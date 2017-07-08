@@ -3,7 +3,7 @@ include ../button-with-icon/button-with-icon
 .slider
     .slider__desc.slider__col_left
         .slider__desc-info
-            h2.slider__desc-title Сайт школы онлайн<br>образования
+            h2.slider__desc-title Сайт школы онлайн образования
             .slider__desc-skills
                 | HTML, css, javascript
             .slider__desc-button
@@ -19,7 +19,7 @@ include ../button-with-icon/button-with-icon
             ul.slider__button-list
                 - for (var i = 1; i <= 4; i++)
                     li.slider__button-item(class=`${(i == 4) ? 'slider__button-item_active' : ''}`)
-                        img.slider__button-img(src=require(`../../images/slider/slide_${i}_min.png`), alt='' data-img=require(`../../images/slider/slide_${i}.png`))
+                        img.slider__button-img(src=require(`../../images/slider/slide_${i}_min.png`), alt='' data-img=require(`../../images/slider/slide_${i}.png`) data-title="Сайт \"атма йога\"" data-skills="pag, scss, javascript" data-href="#")
             svg(class=("slider__button-icon"))
                 use(xlink:href=require("../../images/sprite.svg") + "#portf_arrow_down")
             .slider__button-bg
@@ -27,7 +27,7 @@ include ../button-with-icon/button-with-icon
             ul.slider__button-list
                 - for (var i = 1; i <= 4; i++)
                     li.slider__button-item(class=`${(i == 2) ? 'slider__button-item_active' : ''}`)
-                        img.slider__button-img(src=require(`../../images/slider/slide_${i}_min.png`), alt='' data-img=require(`../../images/slider/slide_${i}.png`))
+                        img.slider__button-img(src=require(`../../images/slider/slide_${i}_min.png`), alt='' data-img=require(`../../images/slider/slide_${i}.png`) data-title="Агенство интернет решений \"itloft\"" data-skills="HTML, css, javascript, nodejs" data-href="#")
             svg(class=("slider__button-icon"))
                 use(xlink:href=require("../../images/sprite.svg") + "#portf_arrow_up")
             .slider__button-bg
