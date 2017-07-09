@@ -11,6 +11,7 @@ const duration = 500,
 
 let inProgress = false;
 
+// Установка ссылки для кнопки
 const setLink = (container) => {
     let href = container.find('.slider__button-item_active').children('.slider__button-img').data('href'),
         link = container.closest('.slider').find('#js_show_site');
@@ -18,6 +19,7 @@ const setLink = (container) => {
     link.attr('href', href);
 };
 
+// Анимация строки
 const animateRow = (str) => {
     let time = 50,
         animate = str.find('span');
@@ -36,6 +38,7 @@ const animateRow = (str) => {
     defText.resolve();
 };
 
+//Разбивка строки по символам и обертка в span
 const spanRow = (container, str, data) => {
     let row = container.find('.slider__button-item_active').children('.slider__button-img').data(data),
         span = '';
@@ -47,6 +50,7 @@ const spanRow = (container, str, data) => {
     str.html(span);
 };
 
+//Перемещение слайдера в лево
 const moveSlidesLeft = (container, direction) => {
     let items = container.find('.slider__button-item'),
         activeItem = items.filter('.slider__button-item_active'),
@@ -76,6 +80,7 @@ const moveSlidesLeft = (container, direction) => {
     });
 };
 
+//Перемещение слайдера в право
 const moveSlidesRight = (container, direction) => {
     let items = container.find('.slider__button-item'),
         activeItem = items.filter('.slider__button-item_active'),
@@ -105,6 +110,7 @@ const moveSlidesRight = (container, direction) => {
     });
 };
 
+//Слайд шоу
 const sliderShow = (container) => {
     const display = container.closest('.slider').find('.slider__display-img'),
         preloader = container.closest('.slider').find('.slider__preloader'),
